@@ -1,0 +1,94 @@
+/* === Basic Reset & Defaults === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Makes width/height calculations more intuitive */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Common sans-serif font stack */
+    line-height: 1.6;                         /* Improves readability */
+    background-color: #f4f4f4;                /* Light gray background */
+    color: #333;                              /* Dark gray text color */
+    padding: 20px;                            /* Some padding around the whole page */
+}
+
+/* === Container for Centering Content === */
+.container {
+    width: 80%;                               /* Container takes up 80% of the page width */
+    max-width: 960px;                         /* But not more than 960px */
+    margin: 20px auto;                        /* Centers the container on the page (top/bottom margin 20px) */
+    padding: 20px;                            /* Inner spacing for the container */
+    background-color: #fff;                   /* White background for the content area */
+    border-radius: 8px;                       /* Slightly rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);    /* Subtle shadow for depth */
+}
+
+/* === Headings === */
+h1, h2, h3 {
+    margin-bottom: 15px;                      /* Space below headings */
+    color: #1a73e8;                           /* A nice blue for headings */
+}
+
+h1 {
+    font-size: 2.5em;                         /* Larger size for main heading */
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+/* === Paragraphs === */
+p {
+    margin-bottom: 10px;                      /* Space below paragraphs */
+}
+
+/* === Links === */
+a {
+    color: #1a73e8;                           /* Same blue as headings for consistency */
+    text-decoration: none;                    /* Remove underline by default */
+}
+
+a:hover {
+    color: #0d47a1;                           /* Darker blue on hover */
+    text-decoration: underline;               /* Add underline on hover */
+}
+
+/* === Lists === */
+ul, ol {
+    margin-bottom: 15px;
+    padding-left: 20px;                       /* Indent list items */
+}
+
+li {
+    margin-bottom: 5px;                       /* Space between list items */
+}
+
+/* === Basic Button Styling (Example) === */
+.button {
+    display: inline-block;
+    background-color: #1a73e8;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+    background-color: #0d47a1;
+}
+
+/* === Images (Basic Responsiveness) === */
+img {
+    max-width: 100%; /* Ensures images don't overflow their containers */
+    height: auto;    /* Maintains aspect ratio */
+    display: block;  /* Can help with spacing issues below images */
+    margin-bottom: 10px;
+}
