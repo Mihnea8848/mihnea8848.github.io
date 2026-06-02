@@ -150,6 +150,95 @@ Use normal language in communicating errors.
 Allow users to exit from errors or a mistaken conversation.
 </p>
 
+<h1>Problem Solutions</h1>
+
+<p>
+<b>Problem #1 — Sandwich ordering (scenario + hierarchical task analysis)</b><br>
+<br>
+<b>Scenario:</b> It is 11 PM and the guest in room 312 is hungry. She picks up the room phone and calls the sandwich service. The software agent greets her with a friendly persona, confirms it can take an order, and asks what she would like. She asks for a chicken sandwich on whole-wheat bread, with cheese, lettuce and mayo. The agent reads back the choices, asks if she wants anything else, confirms the room number and that delivery should be "now", states the price will be charged to her room, and gives an estimated delivery time of 15 minutes. The robot makes the sandwich and the automated system delivers it to room 312.<br>
+<br>
+<b>Hierarchical Task Description (HTA):</b><br>
+0. Order a sandwich<br>
+&nbsp;&nbsp;1. Initiate the conversation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1.1 Dial / call the sandwich service<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1.2 Listen to the agent's greeting<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1.3 State the intent to order a sandwich<br>
+&nbsp;&nbsp;2. Specify the sandwich<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2.1 Choose the bread type<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2.2 Choose the main filling / protein<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2.3 Choose extras (cheese, vegetables, sauces)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2.4 State the quantity<br>
+&nbsp;&nbsp;3. Provide delivery details<br>
+&nbsp;&nbsp;&nbsp;&nbsp;3.1 Confirm the room number<br>
+&nbsp;&nbsp;&nbsp;&nbsp;3.2 Specify the delivery time (now or later)<br>
+&nbsp;&nbsp;4. Confirm the order<br>
+&nbsp;&nbsp;&nbsp;&nbsp;4.1 Listen to the order summary read back by the agent<br>
+&nbsp;&nbsp;&nbsp;&nbsp;4.2 Confirm, or amend an item<br>
+&nbsp;&nbsp;&nbsp;&nbsp;4.3 Approve charging the cost to the room<br>
+&nbsp;&nbsp;5. End the conversation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;5.1 Receive confirmation and estimated delivery time<br>
+&nbsp;&nbsp;&nbsp;&nbsp;5.2 Hang up<br>
+<br>
+<i>Plan:</i> do 1 → 2 → 3 → 4; in 4, if the summary is wrong, return to the relevant step in 2 or 3, then continue; finally do 5. (Being a telephone/speech interface, this design also relies on the Speech Heuristics above — e.g. S1 persona, S2 system status, S7 back-and-forth, S12 confirm input, S17 exit on error.)
+</p>
+
+<p>
+<b>Problem #2 — Colour theory for a travel website</b><br>
+<br>
+<b>What is colour harmony, and why it matters in UI design:</b> Colour harmony is the combination of colours in a way that is pleasing to the eye and creates a sense of order and balance, based on their relationships on the colour wheel. It matters because a harmonious palette reduces visual tension and cognitive load, guides the user's attention to what is important, improves readability, communicates brand identity and emotion, and builds trust — whereas disharmonious colours look chaotic and drive users away.<br>
+<br>
+<b>Analogous vs. complementary — which is better for a calming interface:</b> Analogous schemes use colours that sit next to each other on the wheel (e.g. blue, blue-green, green); they are low-contrast, cohesive and soothing. Complementary schemes use colours opposite each other (e.g. blue and orange); they are high-contrast, vibrant and attention-grabbing, but can feel jarring or tiring if overused. For a <b>calming</b> interface the <b>analogous</b> scheme is better, because its low contrast and smooth transitions feel serene and unified; complementary colours are best reserved for small high-emphasis elements such as call-to-action buttons.<br>
+<br>
+<b>Suggested triadic colour scheme (three hues evenly spaced 120° apart):</b><br>
+– Ocean Blue (dominant, ~60%) — sky and sea; conveys reliability, trust and calm.<br>
+– Warm Yellow / Gold (secondary, ~30%) — sun and warmth; conveys adventure and optimism.<br>
+– Coral Red (accent, ~10%) — energy; used for calls to action (e.g. "Book now").<br>
+<b>Justification:</b> A triad is naturally balanced and lively, which suits a travel brand. Applying the 60-30-10 rule keeps it from becoming overwhelming: blue dominates so the overall feel stays trustworthy and calm, yellow adds warmth, and red is used sparingly to draw the eye to key actions. Using slightly desaturated/tinted versions of each hue (with sufficient contrast against text) preserves aesthetics while keeping the interface readable and accessible — balancing aesthetics and usability.
+</p>
+
+<p>
+<b>Problem #3 — Identifying mobile users' (layout) needs for a redesign</b><br>
+<br>
+The functionality and content must stay the same, so the focus is on understanding how the <b>context and constraints of mobile use</b> change the layout requirements. Methods to identify those needs:<br>
+– <b>Analytics:</b> review which devices, screen sizes and pages mobile visitors actually use, and where they drop off.<br>
+– <b>User interviews & surveys</b> with mobile users to learn their goals and frustrations on small screens.<br>
+– <b>Contextual inquiry / field observation:</b> watch people use the site on the move — one-handed, in bright light, with intermittent connectivity.<br>
+– <b>Task analysis:</b> identify the core tasks and rank content by importance so the most important things appear first.<br>
+– <b>Card sorting</b> to restructure the information architecture for a narrow screen.<br>
+– <b>Usability testing on real devices</b> and a <b>heuristic evaluation</b> against mobile usability principles.<br>
+<br>
+<b>Layout-related needs this reveals:</b> a single-column / responsive layout that reflows to screen width; prioritised content with progressive disclosure (less clutter); collapsible navigation (e.g. a hamburger menu) and key actions placed within the thumb's reach; touch targets large enough to tap accurately (~44px) with adequate spacing; legible font sizes that need no zooming; minimised text input (defaults, autofill); and responsive, lightweight images for performance on slower connections.
+</p>
+
+<p>
+<b>Problem #4 — Health tracking app (POV statement + HMW questions)</b><br>
+<br>
+<b>POV statement</b> (User + Need + Insight):<br>
+<i>A busy, health-conscious but non-technical user needs a simple, effortless way to track their daily health because existing apps overwhelm them with too many features and too much data, which discourages them from using any of them consistently.</i><br>
+<br>
+<b>Three "How Might We" (HMW) questions:</b><br>
+1. How might we let users log their daily health metrics in just a few seconds, with minimal effort?<br>
+2. How might we present health data and insights in a meaningful, motivating way without overwhelming the user?<br>
+3. How might we make a novice user feel confident and in control rather than intimidated by a health tracking app?
+</p>
+
+<p>
+<b>Problem #5 — Heuristic evaluation of the "Carl's Car Audio" shopping cart</b><br>
+<br>
+Example usability problems found, mapped to Nielsen's heuristics:<br>
+– <b>[H1] Visibility of system status:</b> it is not clear who is logged in, and the note only says the problem item is "bolded in red" — hard to tell which item to remove.<br>
+– <b>[H2] Match between system and the real world:</b> "What fits my car" is unclear jargon that users may not understand.<br>
+– <b>[H3] User control and freedom:</b> there is no clear "purchase" / checkout button, so the user cannot complete or cleanly back out of the task.<br>
+– <b>[H4] Consistency and standards:</b> the "Remove?" column uses checkboxes for most rows but yes/no radio buttons for one — inconsistent controls for the same action.<br>
+– <b>[H5] Error prevention:</b> illegal text (e.g. "h") is allowed in the numeric quantity field, and the user can add out-of-stock items to the cart.<br>
+– <b>[H6] Recognition rather than recall:</b> to add a catalogue item the user must remember and type its item number instead of recognising it from a list.<br>
+– <b>[H8] Aesthetic and minimalist design:</b> the bright green header and dense table are cluttered and visually noisy.<br>
+– <b>[H9] Help users recognize, diagnose and recover from errors:</b> the "NOT recommended" message is wordy and does not clearly tell the user what to do.<br>
+– <b>[H10] Help and documentation:</b> the "international visitors" link is hidden at the bottom and may not be readable by non-English speakers.<br>
+<br>
+Each issue would then be given a <b>severity rating</b> (0 = not a problem, 4 = usability catastrophe) and a suggested fix — e.g. validate the quantity field (H5, severity ~3) and add an explicit Checkout button (H3, severity ~4).
+</p>
+
 </div>
 </body>
 </html>
